@@ -9,6 +9,7 @@ import org.apache.avro.util.Utf8;
 @org.apache.avro.specific.AvroGenerated
 public class Employee extends org.apache.avro.specific.SpecificRecordBase
         implements org.apache.avro.specific.SpecificRecord {
+
     private static final long serialVersionUID = -278509023743643639L;
 
     public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse(
@@ -127,7 +128,6 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase
     public static Builder newBuilder() {
         return new Employee.Builder();
     }
-
 
     public static Builder newBuilder(Employee.Builder other) {
         if (other == null) {

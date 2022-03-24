@@ -1,8 +1,7 @@
-##CONFIGS SPRING
+
 server:
   port: ${PORT:8099}
 
-##APP CONFIGS
 spring:
   application:
     name: kafka
@@ -21,7 +20,6 @@ spring:
       value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
       group-id: greatests-finance
 
-# Common Kafka Properties
 auto:
   create:
     topics:

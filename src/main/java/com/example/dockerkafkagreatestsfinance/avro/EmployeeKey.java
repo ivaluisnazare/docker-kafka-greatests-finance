@@ -93,26 +93,21 @@ public class EmployeeKey extends org.apache.avro.specific.SpecificRecordBase
         }
     }
 
-
     public int getId() {
         return id;
     }
-
 
     public void setId(int value) {
         this.id = value;
     }
 
-
     public java.lang.CharSequence getDepartmentName() {
         return departmentName;
     }
 
-
     public void setDepartmentName(java.lang.CharSequence value) {
         this.departmentName = value;
     }
-
 
     public static EmployeeKey.Builder newBuilder() {
         return new EmployeeKey.Builder();
@@ -226,7 +221,6 @@ public class EmployeeKey extends org.apache.avro.specific.SpecificRecordBase
                 throw new org.apache.avro.AvroRuntimeException(e);
             }
         }
-
     }
 
     @SuppressWarnings("unchecked")

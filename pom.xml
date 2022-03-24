@@ -23,7 +23,6 @@
 			<url>http://packages.confluent.io/maven/</url>
 		</repository>
 	</repositories>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -33,10 +32,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.cloud</groupId>-->
-<!--			<artifactId>spring-cloud-starter-sleuth</artifactId>-->
-<!--		</dependency>-->
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
@@ -62,40 +57,32 @@
 			<artifactId>kafka-clients</artifactId>
 			<version>3.1.0</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.apache.kafka/kafka-streams -->
 		<dependency>
 			<groupId>org.apache.kafka</groupId>
 			<artifactId>kafka-streams</artifactId>
 			<version>2.8.0</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.springframework.kafka/spring-kafka -->
 		<dependency>
 			<groupId>org.springframework.kafka</groupId>
 			<artifactId>spring-kafka</artifactId>
 			<version>2.8.2</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.apache.avro/avro -->
 		<dependency>
 			<groupId>org.apache.avro</groupId>
 			<artifactId>avro</artifactId>
 			<version>1.11.0</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/net.logstash.logback/logstash-logback-encoder -->
 		<dependency>
 			<groupId>net.logstash.logback</groupId>
 			<artifactId>logstash-logback-encoder</artifactId>
 			<version>7.0.1</version>
 		</dependency>
-
 		<dependency>
 			<groupId>io.confluent</groupId>
 			<artifactId>kafka-avro-serializer</artifactId>
 			<version>5.3.0</version>
 		</dependency>
-
-
 	</dependencies>
-
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -112,10 +99,6 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-
-
-
-
 	<build>
 		<plugins>
 			<plugin>
@@ -132,5 +115,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
