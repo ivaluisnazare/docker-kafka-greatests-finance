@@ -1,4 +1,4 @@
-package com.example.dockerkafkagreatestsfinance.kafka.broken;
+package com.example.dockerkafkagreatestsfinance.kafka.service;
 
 import com.example.dockerkafkagreatestsfinance.avro.Employee;
 import com.example.dockerkafkagreatestsfinance.avro.EmployeeKey;
@@ -49,6 +49,8 @@ public class EmployeeProducer {
         employeeKey.setDepartmentName("IT");
 
         kafkaProducer.send(new ProducerRecord(topicName, employeeKey, employee));
+
+
     }
 
 }

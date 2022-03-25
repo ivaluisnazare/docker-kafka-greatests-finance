@@ -1,4 +1,4 @@
-version: '3.7'
+version: '3.8'
 
 networks:
   local_network:
@@ -122,6 +122,29 @@ services:
       local_network:
         ipv4_address: 154.0.0.11
 
+  db:
+    container_name: postgres
+    image: postgres:14-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '5432:5432'
+    volumes:
+      - db:/home/iva/Documentos/me/microservices/docker-kafka-greatests-finance/postgres/data
+    healthcheck:
+      test: [ "CMD-SHELL", "exit 0" ]
+      interval: 30s
+      timeout: 10s
+      retries: 10
+    networks:
+      local_network:
+        ipv4_address: 154.0.0.12
+
+volumes:
+  db:
+    driver: local
 
 
 

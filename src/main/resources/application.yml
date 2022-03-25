@@ -4,7 +4,22 @@ server:
 
 spring:
   application:
-    name: kafka
+    name: schema-kafka
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    generate-ddl: true
 
   kafka:
     properties:
@@ -37,16 +52,14 @@ kafka:
     value:
       serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
     key:
-    serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+      serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
   topics:
     employee: employee-topic
 
-#APP
 app:
-  title: Kafka
+  title: schema-kafka
   version: 0.0.1
 
-##CONFIGS SPRING ACTUATOR
 management:
   endpoints:
     web:

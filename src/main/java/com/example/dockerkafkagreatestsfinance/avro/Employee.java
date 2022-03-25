@@ -1,14 +1,29 @@
 package com.example.dockerkafkagreatestsfinance.avro;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.apache.avro.message.BinaryMessageDecoder;
 import org.apache.avro.message.BinaryMessageEncoder;
 import org.apache.avro.message.SchemaStore;
 import org.apache.avro.specific.SpecificData;
 import org.apache.avro.util.Utf8;
 
+import javax.persistence.*;
+
+
+@Data
+@Entity(name="employee")
+@AllArgsConstructor
 @org.apache.avro.specific.AvroGenerated
 public class Employee extends org.apache.avro.specific.SpecificRecordBase
         implements org.apache.avro.specific.SpecificRecord {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id_employee", nullable = false)
+    private Long id_employee;
+
 
     private static final long serialVersionUID = -278509023743643639L;
 
@@ -284,6 +299,14 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase
     @SuppressWarnings("unchecked")
     private static final org.apache.avro.io.DatumReader<Employee> READER$ = (org.apache.avro.io.DatumReader<Employee>) MODEL$
             .createDatumReader(SCHEMA$);
+
+    public Long getId_employee() {
+        return id_employee;
+    }
+
+    public void setId_employee(Long id_employee) {
+        this.id_employee = id_employee;
+    }
 
     @Override
     public void readExternal(java.io.ObjectInput in) throws java.io.IOException {
